@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask , render_template
 # from .jobs.route import job_route
 # from .db.database import init_db
 
@@ -16,6 +16,10 @@ def create_app(test_config=None):
             pass
 
         @app.route('/')
+        def home():
+            return render_template('index.html', title="Home Page")
+
+        @app.route('/hello')
         def hello():
             return 'Python Flask'
 
