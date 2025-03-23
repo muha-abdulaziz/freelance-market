@@ -1,0 +1,16 @@
+*.pyc
+src/__pycache__/
+src/jobs/__pycache__/
+src/db/__pycache__/
+src/.env
+.pytest_cache
+.vscode
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore the virtual environment directory
+venv/
+
+# Ignore log files
+*.log
