@@ -1,6 +1,8 @@
-from . import create
+from src.models.job import Job
+from src.repositories.jobs import JobsRepository
+
 
 class JobService:
-    def createNewJob(self, title):
-        create(create=title)
-        return {"message": "Job has been created successfully"}
+    @staticmethod
+    def create_job(title: str, description: str) -> Job:
+        return JobsRepository.create_job(title, description)
